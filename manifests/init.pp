@@ -1,4 +1,6 @@
-file { '/etc/motd':
+class motd {
+  file { '/etc/motd':
     ensure  => present,
     content => template("motd/motd.erb"),
+}
 }
