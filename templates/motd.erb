@@ -2,6 +2,8 @@
 | This is a TEST server managed by Puppet.				     	  |
 +-------------------------------------------------------------------------+
 
+  Environment: <%= scope.lookupvar('::environment') %>
+
   Hostname:   <%= scope.lookupvar('::fqdn') %>
   IP Address: <%= ipaddress %>
 
