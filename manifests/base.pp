@@ -34,10 +34,11 @@ class profiles::base {
     value   => '3',
   }
 
-  class { '::ntp':
-    servers       => ['0.amazon.pool.ntp.org', '1.amazon.pool.ntp.org', '2.amazon.pool.ntp.org', '3.amazon.pool.ntp.org'],
-    iburst_enable => true,
-  }
+# NTP is not needed for container instances as it inherits the date/time from the server.
+#  class { '::ntp':
+#    servers       => ['0.amazon.pool.ntp.org', '1.amazon.pool.ntp.org', '2.amazon.pool.ntp.org', '3.amazon.pool.ntp.org'],
+#    iburst_enable => true,
+#  }
 
   # This is a workaround as the example42/timezone module does not have a template for Amazon Linux:
   if $::operatingsystem == "Amazon" {
