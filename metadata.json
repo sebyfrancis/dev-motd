@@ -2,12 +2,12 @@
   "author": "Seby Francis K",
   "dependencies": [],
   "license": "-",
-  "name": "devel-profiles",
+  "name": "devel-motd",
   "operatingsystem_support": [],
   "project_page": "",
   "requirements": [],
   "source": "-",
-  "summary": "Puppet wrapper classes for specific tech.",
-  "tags": ["puppet", "profiles"],
+  "summary": "MOTD for devel servers",
+  "tags": ["devel", "motd"],
   "version": "0.1.0"
 }

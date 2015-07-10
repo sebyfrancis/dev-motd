@@ -1,1 +1,1 @@
-include profiles
+include motd
