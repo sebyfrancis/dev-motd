@@ -1,19 +1,16 @@
 +-------------------------------------------------------------------------+
-| This is a TEST server managed by Puppet.				  |
-+-------------------------------------------------------------------------+
+ TEST SYSTEM MANAGED BY PUPPET.
 
-  Environment: <%= scope.lookupvar('::environment') %>
+ Environment: <%= scope.lookupvar('::environment') %>
+ Hostname:   <%= scope.lookupvar('::fqdn') %>
+ IP Address: <%= ipaddress %>
 
-  Hostname:   <%= scope.lookupvar('::fqdn') %>
-  IP Address: <%= ipaddress %>
-
-  Operating System: <%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>
+ Operating System: <%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>
 
 <% if !processor0.nil? then -%>
-  Processor: (<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
+ Processor: (<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
 <% end -%>
 <% if !memorysize.nil? then -%>
-  Memory: <%= scope.lookupvar('::memorysize') %>
+ Memory: <%= scope.lookupvar('::memorysize') %>
 <% end -%>
-
-+-------------------------------------------------------------------------+
++_________________________________________________________________________+
