@@ -1,0 +1,23 @@
+author "Khalid J Hosein"
+description "Platform28 TRADE Kernel"
+start on runlevel [235]
+stop on runlevel [S0146]
+respawn
+pre-start script
+  export FS_PORT=0
+  until [  ${FS_PORT} -ge 1 ]
+  do
+   sleep 1
+   export FS_PORT=$(netstat -an|egrep -c '0 0.0.0.0:8021')
+  done
+end script
+script
+  exec su -s /bin/sh -c /home/tradekernel/TRADE/bin/start_and_loop.sh tradekernel
+end script
+post-start script
+  sleep 6
+  su -c 'ln -sf /home/tradekernel/TRADE/logs/EXSKernel-`pgrep -n p28kernel`.log  /home/tradekernel/TRADE/logs/EXSKernel.log' tradekernel
+end script
+post-stop script
+  pkill -9 p28kernel
+end script

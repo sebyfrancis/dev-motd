@@ -1,0 +1,13 @@
+{
+  "author": "Khalid J Hosein",
+  "dependencies": [],
+  "license": "-",
+  "name": "kjh-puppet_profiles",
+  "operatingsystem_support": [],
+  "project_page": "",
+  "requirements": [],
+  "source": "-",
+  "summary": "Puppet wrapper classes for specific tech.",
+  "tags": ["puppet", "profiles"],
+  "version": "0.1.0"
+}

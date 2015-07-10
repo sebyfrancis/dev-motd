@@ -1,0 +1,13 @@
+
+java.util.logging.manager                          = java.util.logging.LogManager
+openejb.system.apps                                = true
+org.apache.openejb.assembler.classic.WebAppBuilder = org.apache.openejb.web.LightweightWebAppBuilder
+openejb.autocreate.jta-datasource-from-non-jta-one = false
+java.naming.factory.initial                        = org.apache.openejb.client.LocalInitialContextFactory
+openejb.log.factory                                = log4j
+
+com.platform28.outboundDialer.appKey                      = <%= @_dialer_app_key %>
+com.platform28.config.apiServer                           = <%= @_api_server %>
+com.platform28.outboundDialer.scheduler.scanning_interval = 10
+com.platform28.dialer.sip.registration.domain             = <%= @_sip_registration_domain %>
+com.platform28.sip.bindAddress                            = <%= @_sip_bind_address %>

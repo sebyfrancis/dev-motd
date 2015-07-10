@@ -1,0 +1,12 @@
+<!-- install in $RESIN_HOME/licenses/1016003.license -->
+<caucho-license>
+  <id>1016003</id>
+  <type>Resin</type>
+  <customer>Platform28</customer>
+  <server-count>34</server-count> <!-- CPU count -->
+  <issue-date>1408345200000</issue-date> <!-- 2014-08-18 -->
+  <version-expire-date>1438153200000</version-expire-date> <!-- 2015-07-29 -->
+  <expire-date>1445929200000</expire-date> <!-- 2015-10-27 -->
+  <signature>MCwCFBNV3nWOqBxkBiXWkA7o4kih7egIAhRW0TaGQ6ntZnMjX47iPznzR5zCOQ==</signature>
+  <signature31>MCwCFHs7HwxUcM9Wn7CfVSxlffyFsa9ZAhQIs+ocyO4AiLrsNaoXFjmCnjLkwA==</signature31>
+</caucho-license>

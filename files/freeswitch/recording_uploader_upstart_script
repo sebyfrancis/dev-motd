@@ -1,0 +1,12 @@
+# Upstart job to start/stop the Recordings Uploader
+author "Seby Francis"
+description "Platform28 Recordings uploader"
+start on runlevel [235]
+stop on runlevel [S0146]
+respawn
+script
+  exec su -s /bin/sh -c /home/tradekernel/TRADE/bin/start_recuploader_and_loop.sh tradekernel
+end script
+post-stop script
+  pkill -9 -u tradekernel -f recording_uploader
+end script

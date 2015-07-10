@@ -1,0 +1,13 @@
+#!/bin/sh
+
+DAYS=7
+BZIP_MINS=1500
+
+find /var/log/resin/ -name jvm\*log\* -mmin +${BZIP_MINS} -exec bzip2 {} \;        2>/dev/null
+find /var/log/resin/ -name jvm\*log\* -mtime +${DAYS} -exec rm {} \;               2>/dev/null
+find /var/log/resin/ -name platform28.log\* -mmin +${BZIP_MINS} -exec bzip2 {} \;  2>/dev/null
+find /var/log/resin/ -name platform28.log\* -mtime +${DAYS} -exec rm {} \;         2>/dev/null
+
+find /var/resin/log/access.log* -mtime +${DAYS} -exec rm {} \;                     2>/dev/null 
+# find /var/resin/web/log/*access.log* -mtime +${DAYS} -exec rm {} \;              2>/dev/null
+# find /var/resin/web/platform/log/*access.log* -mtime +${DAYS} -exec rm {} \;     2>/dev/null

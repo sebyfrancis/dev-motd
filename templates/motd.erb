@@ -1,0 +1,25 @@
+###########################################################################
+#                                                                         #
+# Hold on cowboy! If this is a LIVE PRODUCTION system, please think twice #
+# about modifying anything, especially during customer business hours.    #
+#                                                                         #
+# Additionally, if you need to make changes, find out if they             #
+# can be made automatically (Puppet, etc.). Ask Ops:                      #
+#   noc@platform28.com / #ops channel on Slack                            #
+#                                                                         #
+###########################################################################
+
+  Hostname:   <%= scope.lookupvar('::fqdn') %>
+  IP Address: <%= ipaddress %>
+
+  Operating System: <%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>
+
+<% if !processor0.nil? then -%>
+  Processor: (<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
+<% end -%>
+<% if !memorysize.nil? then -%>
+  Memory: <%= scope.lookupvar('::memorysize') %>
+<% end -%>
+
+###########################################################################
+

@@ -1,0 +1,5 @@
+# This is for accessing the GA STARS system
+# so as to route it via our AWS EIPs.
+GATEWAY0=10.0.2.217
+NETMASK0=255.255.255.255
+ADDRESS0=167.195.109.15
