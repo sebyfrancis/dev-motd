@@ -1,13 +1,13 @@
 [1;31m
  System managed by Puppet[1;32m
 
- Environment: [0;31m<%= scope.lookupvar('::environment') %>[1;32m
- Hostname:   [0;31m<%= scope.lookupvar('::fqdn') %>[1;32m
- IP Address: [0;31m<%= ipaddress %>[1;32m
+ Environment: 	   [0;31m<%= scope.lookupvar('::environment') %>[1;32m
+ Hostname:         [0;31m<%= scope.lookupvar('::fqdn') %>[1;32m
+ IP Address:       [0;31m<%= ipaddress %>[1;32m
  Operating System: [0;31m<%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>[1;32m
 <% if !processor0.nil? then -%>
- Processor: [0;31m(<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>[1;32m
+ Processor:        [0;31m(<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>[1;32m
 <% end -%>
 <% if !memorysize.nil? then -%>
- Memory: [0;31m<%= scope.lookupvar('::memorysize') %>
+ Memory:           [0;31m<%= scope.lookupvar('::memorysize') %>
 <% end -%>[0m
