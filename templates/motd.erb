@@ -1,16 +1,12 @@
-[1;32m
- TEST SYSTEM MANAGED BY PUPPET.
+[1;31m TEST SYSTEM MANAGED BY PUPPET.[1;32m
 
  Environment: [1;31m<%= scope.lookupvar('::environment') %>[1;32m
  Hostname:   [1;31m<%= scope.lookupvar('::fqdn') %>[1;32m
  IP Address: [1;31m<%= ipaddress %>[1;32m
-
  Operating System: [1;31m<%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>[1;32m
-
 <% if !processor0.nil? then -%>
  Processor: [1;31m(<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
 <% end -%>[1;32m
 <% if !memorysize.nil? then -%>
  Memory: [1;31m<%= scope.lookupvar('::memorysize') %>[1;32m
-<% end -%>
-[0m
+<% end -%>[0m
