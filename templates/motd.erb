@@ -3,15 +3,15 @@
 
  Environment: [1;31m<%= scope.lookupvar('::environment') %>[1;32m
  Hostname:   [1;31m<%= scope.lookupvar('::fqdn') %>[1;32m
- IP Address: [1;32m<%= ipaddress %>[1;32m
+ IP Address: [1;31m<%= ipaddress %>[1;32m
 
- Operating System: [1;32m<%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>[1;32m
+ Operating System: [1;31m<%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>[1;32m
 
 <% if !processor0.nil? then -%>
- [1;32mProcessor: (<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
+ [1;31mProcessor: (<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
 <% end -%>
 <% if !memorysize.nil? then -%>
- Memory: [1;32m<%= scope.lookupvar('::memorysize') %>[1;32m
+ Memory: [1;31m<%= scope.lookupvar('::memorysize') %>[1;32m
 <% end -%>
 
 ---------------------------------------------------------------------------[0m
