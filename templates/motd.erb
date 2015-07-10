@@ -1,4 +1,4 @@
-[1;32m---------------------------------------------------------------------------
+[1;32m
  TEST SYSTEM MANAGED BY PUPPET.
 
  Environment: [1;31m<%= scope.lookupvar('::environment') %>[1;32m
@@ -8,10 +8,9 @@
  Operating System: [1;31m<%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>[1;32m
 
 <% if !processor0.nil? then -%>
- [1;31mProcessor: (<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
-<% end -%>
+ Processor: [1;31m(<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
+<% end -%>[1;32m
 <% if !memorysize.nil? then -%>
  Memory: [1;31m<%= scope.lookupvar('::memorysize') %>[1;32m
 <% end -%>
-
----------------------------------------------------------------------------[0m
+[0m
