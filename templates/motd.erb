@@ -1,8 +1,7 @@
----------------------------------------------------------------------------
-^[[1m5m
+^[[1;34m---------------------------------------------------------------------------
  TEST SYSTEM MANAGED BY PUPPET.
 
- Environment: <%= scope.lookupvar('::environment') %>  ^[[m
+ Environment: <%= scope.lookupvar('::environment') %>
  Hostname:   <%= scope.lookupvar('::fqdn') %>
  IP Address: <%= ipaddress %>
 
@@ -15,4 +14,4 @@
  Memory: <%= scope.lookupvar('::memorysize') %>
 <% end -%>
 
----------------------------------------------------------------------------
+---------------------------------------------------------------------------^[[0m
