@@ -11,10 +11,3 @@
 <% if !memorysize.nil? then -%>
 [1;32m Memory: [1;31m<%= scope.lookupvar('::memorysize') %>[1;32m
 <% end -%>[0m
-
-ENV:	     @environment
-FQDN:	     @fqdn
-IP:	     @ipaddress	
-OS:	     @operatingsystem @operatingsystemrelease @architecture
-MEM:         @memorysize	
-UPTIME:	     @uptime_days Days @uptime_hours Hours @uptime_seconds Seconds	
