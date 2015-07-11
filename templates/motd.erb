@@ -6,9 +6,9 @@
  IP Address:       [0;31m<%= ipaddress %>[1;32m
  Operating System: [0;31m<%= scope.lookupvar('::operatingsystem') %> <%= scope.lookupvar('::operatingsystemrelease') %> <%= scope.lookupvar('::architecture') %>[1;32m
 <% if !processor0.nil? then -%>
- Processor:        [0;31m(<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>
+ Processor:        [0;31m(<%= scope.lookupvar('::processorcount') %>x) <%= scope.lookupvar('::processor0') %>[1;32m
 <% end -%>
 <% if !memorysize.nil? then -%>
-[1;32m Memory:   [0;31m<%= scope.lookupvar('::memorysize') %>[1;32m
+ Memory:           [0;31m<%= scope.lookupvar('::memorysize') %>[1;32m
  Uptime:           [0;31m<%= scope.lookupvar('::uptime') %>
 <% end -%>[0m
